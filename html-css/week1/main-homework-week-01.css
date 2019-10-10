@@ -1,0 +1,210 @@
+* {
+    box-sizing: border-box;
+    margin: auto; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  section, article, aside, footer, header, nav {
+    display: block;
+  }
+
+  body {
+    background-color: white; 
+    b-ackground-image: url(https://github.com/mag-da-lenka/HYF-heptapods/blob/master/IMGP0011fiafiolki.jpg?raw=true); 
+  } 
+
+  /*I know that b-ackground-image or b-order are NOT valid property names, but I like to keep them like thet to switch thinhs on/off without hving to waste too much time <3 */
+
+  h1, h2, h3, h4 {
+    color: rgb(0, 29, 0); 
+  }
+
+  h1 {
+    font-size: 2,5em;
+  } 
+  h2 {
+    font-size: 2,0em;
+  }
+  h3 {
+    font-size: 1,5em;
+  }
+
+  h4 {
+    font-size: 1,0em;
+  }
+
+
+
+  p {
+    color: rgb(10, 14, 3);
+    text-align: left;
+    padding: 10px 0px 20px 0px;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+
+  .text-width-80 {
+    width: 80%;
+  }
+
+  .cph-font {
+    font-family: 'Courier New', Courier, monospace;
+    color: darkgray;
+  }
+
+  .hyf-font {
+    font-family: 'Courier New', Courier, monospace;
+    color: black; 
+  }
+
+  table {
+  text-align: left; 
+  width: 100%; 
+  } 
+
+  .col-width-1 {
+   width: 12%;
+  }
+
+  .col-width-2 {
+    width: 25%;
+  }
+
+  .col-width-3 {
+    width: 39%;
+  }
+   
+  .col-width-4 {
+    width: 50%;
+  } 
+
+
+  a {
+    font-size: 15px; 
+    font-weight: bold;
+    color: blue;
+  }
+
+  .nav-l {
+    background-color:white;
+    box-shadow: 10px 10px 8px #888888;
+    margin-top: 2%;    
+    padding: 5px 5px 5px 5px;
+    margin-left: 5%;
+    margin-bottom:2%;
+    width: 60%; 
+    b-order: dotted 7px black; 
+    float: left;
+  }
+
+  .nav-r {
+    background-color: white;
+    box-shadow: 10px 10px 8px #888888;
+    margin-top: 2%;    
+    padding: 5px 5px 5px 5px;
+    margin-right: 5%;
+    margin-bottom: 2%;
+    width: 25%; 
+    b-order: dotted 7px black; 
+    float: right;  
+  }
+
+  header {
+    background-color:whitesmoke;
+    order: dotted 7px red; 
+    padding: 20px 15px 20px 15px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 5%; 
+    width: 90%; 
+    box-shadow: 10px 10px 8px #888888;
+    text-align: center;  
+    clear: both;
+  } 
+  
+  figure {
+    background-color: white;
+    box-shadow: 10px 10px 8px #888888;
+    padding: 25px 5px 20px 5px; 
+    margin-bottom: 1%;
+    width: 170px;  
+    border: solid 1px lightslategray; 
+  }
+
+  .img-logo-width {
+    width: 100px; 
+  }
+
+  .float-l {
+    float: left;
+  }
+
+  .float-r {
+    float: right;
+  }
+  
+  ul{ list-style-type: none; }
+
+  article {
+    background-color:white;  
+    box-shadow: 10px 10px 8px #888888;
+    margin-top: 5%;
+    margin-bottom: 5%; 
+    margin-left: 5%;
+    width: 70%;
+    float: left; 
+    padding-top: 1%; 
+    b-order: dotted 7px red; 
+  } 
+
+  section {
+    background-color:white;
+    b-order: dotted 5px pink; 
+    padding: 10px 10px 20px 55px; 
+    
+  }
+
+  aside {
+    background-color:white; 
+    box-shadow: 10px 10px 8px #888888;
+    width: 17%; 
+    margin-right: 5%;
+    margin-top: 5%; 
+    padding: 20px 15px 15px 25px;
+    float: right;
+    b-order: dotted 7px black; 
+  }  
+  
+  footer {
+    background-color: whitesmoke; 
+    box-shadow: 10px 10px 8px #888888;
+    width: 90%; 
+    clear: both;
+    order: dashed 5px black;
+    padding: 25px 15px 15px 55px; 
+    margin-bottom: 2%;
+  } 
+
+  a:link {
+    color:darkgray;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+
+  a:visited {
+    color: gray;
+  }
+
+  a:hover,
+  a:active,
+  a:focus {
+    background-color: orange; 
+    opacity:0.9;
+
+  }
