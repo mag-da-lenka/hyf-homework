@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main-hyf12-homework-week03-form-mag.css">
+    <title>Homework HYF class-12 week-3 Form by Magdalena</title>
+</head>
+
+<body>
+
+    <section class="top-bar">
+
+        <figure>
+            <img class="logo-pic"
+                src="https://github.com/mag-da-lenka/icons-robots/blob/master/bb8-iconfinder_JD-41_2624876.png?raw=true"
+                alt="bb8 pretending to be a logo">
+            <!---<figcaption>bb8-squirreloid</figcaption>--->
+        </figure>
+
+        <nav>
+            <a href="#link-01">link 01</a> <!-- id="link-01" etc  -->
+            <a href="#link-02">link 02</a> <!-- id="link-02" etc  -->
+            <a href="#link-03">link 03</a> <!-- id="link-03" etc  -->
+            <a href="#link-04">link 04</a> <!-- id="link-04" etc  -->
+        </nav>
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <h1>Form</h1>
+
+    <form id="form1" method="post" action="success.html">
+
+        <div class="pc-tab">
+            <!--the four lines below are radio buttons in a tab -->
+            <input checked="checked" id="tab1" type="radio" name="pct" />
+            <input id="tab2" type="radio" name="pct" />
+            <input id="tab3" type="radio" name="pct" />
+            <input id="tab4" type="radio" name="pct" />
+
+
+
+            <section>
+
+
+
+                <div class="tab1">
+
+                    <h2>Sign up to your-squirrel-tailor.com</h2>
+                    <p>We can’t wait to help you improve your life-style and gain the attention from people around you!
+                        Sign up below to save up to 70% on apparel, hand-bags and cosmetics. Our agents are busy picking
+                        the best oﬀers that match your preferences and style. </p>
+                    <p>Every week we will send you a hand-picked selection - we just need to know a few details about
+                        you ﬁrst… </p>
+
+                    <h3>Step 1/4 - tell us who you are</h3>
+                    <p>Progress: </p>
+                    <progress max="100" value="20"></progress>
+                    <p>Nice to meet you. Let’s spend a minute to get to know each other? Please enter the following:</p>
+
+
+                    <div class="inputs">
+                        <!--- this are inputs for tab 1-->
+
+                        <label for="firstname">First name *</label>
+                        <input type="text" class="input-required" id="firstname" name="firstname"
+                            placeholder="insert first name" required>
+
+                        <label for="lastname">Last name *</label>
+                        <input type="text" class="input-required" id="lastname" name="lastname"
+                            placeholder="insert last name" required>
+
+                        <label for="country">Country *</label>
+                        <select class="drop-menu-style" id="country" name="country" required>
+                            <option value="Denmark">Denmark</option>
+                            <option value="Poland">Poland</option>
+                            <option value="Palestine*">Palestine*</option>
+                            <option value="Jordan">Jordan</option>
+                        </select>
+
+                        <label for="streetaddress">Street address *</label>
+                        <input type="text" class="input-required" id="streetaddress" name="streetaddress"
+                            placeholder="insert street address" required>
+
+                        <label for="postcode">Post code *</label>
+                        <input type="text" class="input-required" id="postcode" name="postcode"
+                            placeholder="insert post code" required>
+
+                        <label for="profiledescription">Profile description (optional)</label>
+                        <textarea class="text-area-style" id="profiledescription" name="profiledescription"
+                            placeholder="Please provide a short description of yourself to be displayed on our social community pages."></textarea>
+
+
+
+                        <p>Use the same address for billing and shipping? </p>
+
+                        <!---below is the checkbox - shipping address -->
+                        <label class="shipping-address">Uncheck the box below to ﬁll out a separate
+                            shipping address.
+                            <input type="checkbox" checked="checked">
+
+
+                            <div class="alt-address">
+                                <!-- this is the initially invisible part; it appears if the user UNCHECKS the checkbox-->
+                                <!-- it appears if the user UNCHECKS the checkbox-->
+                                <!-- I removed the REQUIRED word from each input-->
+
+                                <label for="firstname">First name*</label>
+                                <input type="text" id="firstname" name="firstname" placeholder="insert first name">
+
+                                <label for="lastname">Last name*</label>
+                                <input type="text" id="lastname" name="lastname" placeholder="insert last name">
+
+                                <label for="country">Country*</label>
+                                <input type="text" id="country" name="country" placeholder="insert yout country">
+
+                                <label for="shippingaddress">Street address*</label>
+                                <input type="text" id="shippingaddress" name="shippingaddress"
+                                    placeholder="insert shipping address">
+
+                                <label for="postcode">Post code*</label>
+                                <input type="text" id="postcode" name="postcode" placeholder="insert post code">
+
+                            </div>
+                            <!---end of div class="alt-ad"-->
+
+                        </label>
+                        <!---end of label class="shipping-address"-->
+
+                    </div>
+                    <!--end of inputs step 1-->
+
+                    <div class="navigation-bar-steps">
+                        <div class="fake-navi-button">Take me to nowhere</div>
+                        <label for="tab2" id="label2" class="navigation"> Take me to Step 2 </label>
+                    </div>
+
+                </div>
+                <!--end of div=class"tab1"-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="tab2">
+
+                    <h2>Sign up to your-squirrel-tailor.com</h2>
+                    <p>We can’t wait to help you improve your lifestyle and gain the attention from people around you!
+                    </p>
+
+                    <h3>Step 2/4 - how can we reach you?</h3>
+                    <p>Progress: </p>
+                    <progress max="100" value="50"></progress>
+                    <p>We will probably need to stay in touch somehow.Let us know how to reach you.</p>
+
+                    <div class="inputs">
+
+                        <label for="email">Email*</label>
+                        <input type="email" class="input-required" id="email" name="email" placeholder=".....@gmail.com"
+                            pattern="[a-zA-Z]{0-9}@[a-zA-Z]{3,}[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,}" required>
+
+                        <label for="phone">Phone (optional)</label>
+                        <input type="text" id="phone" name="phone" placeholder="4466 9977">
+
+                        <label for="password">Password*</label>
+                        <input type="text" class="input-required" id="password" name="password" minlength="6"
+                            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" placeholder="enter your password"
+                            required>
+
+                        <label for="reenterpassword">Re-enter your password*</label>
+                        <!--could the --id-- and/or --name-- be the same as in the password input or is that dangerous?-->
+                        <input type="text" class="input-required" id="reenterpassword" name="reenterpassword"
+                            minlength="6" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+                            placeholder="re-enter your password" required>
+
+                    </div>
+                    <!--end of inputs step 2 part 1-->
+
+                    <p>I want to sign up for the newsletter </p>
+
+                    <div class="inputs">
+
+                        <input id='newsletter-1' name='newsletter' type='radio' value='weekly-news' checked />
+                        <label for='newsletter-1' class='radio-label'>Weekly news</label>
+
+                        <input id='newsletter-2' name='newsletter' type='radio' value='monthly-news' />
+                        <label for='newsletter-2' class='radio-label'>Monthly news</label>
+
+                        <input id='newsletter-3' name='newsletter' type='radio' value='no-news' />
+                        <label for='newsletter-3' class='radio-label'>Don't send me news</label>
+
+                    </div>
+                    <!--end of inputs step 2 part 2-->
+
+                    <div class="navigation-bar-steps">
+                        <label for="tab1" class="navigation">Take me to step 1</label>
+                        <label for="tab3" id="label3" class="navigation">Take me to step 3</label>
+                    </div>
+
+                </div>
+                <!--end of div=class"tab2"-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="tab3">
+
+                    <h2>Sign up to your-squirrel-tailor.com</h2>
+                    <h3>Step 3/4 - Time to learn about your preferences</h3>
+                    <p>Progress: </p>
+                    <progress max="100" value="80"></progress>
+                    <p>What kind of items are you interested in offers on? </p>
+
+
+                    <div class="inputs" id="checkbox-container-step3">
+                        <!--inputs step 3 part 1-->
+
+                        <label for='apparel'> Apparel
+                            <input id='apparel' name='apparel' type='checkbox' value='apparel' />
+                        </label>
+
+                        <label for='accessories'> Accessories
+                            <input id='accessories' name='accessories' type='checkbox' value='accessories' />
+                        </label>
+
+                        <label for='handbags'> Handbags
+                            <input id='handbags' name='handbags' type='checkbox' value='handbags' />
+                        </label>
+
+                        <label for='jewelry'> Jewelry
+                            <input id='jewelry' name='jewelry' type='checkbox' value='jewelry' />
+                        </label>
+
+                        <label for='shoes'> Shoes
+                            <input id='shoes' name='shoes' type='checkbox' value='shoes' />
+                        </label>
+
+                    </div>
+                    <!--end of inputs step 3 part-1-->
+
+
+                    <div class="inputs" id="img-container">
+                        <!--inputs step 3 part 2-->
+
+                        <figure>
+                            <img src="https://github.com/mag-da-lenka/HYF-heptapods/blob/master/hw3-bag.jpg?raw=true"
+                                alt="a pic of my bag on sth fluffy">
+                            <input type="checkbox">
+                        </figure>
+
+                        <figure>
+                            <img src="https://github.com/mag-da-lenka/HYF-heptapods/blob/master/hw3-bag.jpg?raw=true"
+                                alt="a pic of my bag on sth fluffy">
+                            <input type="checkbox">
+                        </figure>
+
+                        <figure>
+                            <img src="https://github.com/mag-da-lenka/HYF-heptapods/blob/master/hw3-bag.jpg?raw=true"
+                                alt="a pic of my bag on sth fluffy">
+                            <input type="checkbox">
+                        </figure>
+
+                        <figure>
+                            <img src="https://github.com/mag-da-lenka/HYF-heptapods/blob/master/hw3-bag.jpg?raw=true"
+                                alt="a pic of my bag on sth fluffy">
+                            <input type="checkbox">
+                        </figure>
+
+                        <figure>
+                            <img src="https://github.com/mag-da-lenka/HYF-heptapods/blob/master/hw3-bag.jpg?raw=true"
+                                alt="a pic of my bag on sth fluffy">
+                            <input type="checkbox">
+                        </figure>
+
+                        <figure>
+                            <img src="https://github.com/mag-da-lenka/HYF-heptapods/blob/master/hw3-bag.jpg?raw=true"
+                                alt="a pic of my bag on sth fluffy">
+                            <input type="checkbox">
+                        </figure>
+
+                        <figure>
+                            <img src="https://github.com/mag-da-lenka/HYF-heptapods/blob/master/hw3-bag.jpg?raw=true"
+                                alt="a pic of my bag on sth fluffy">
+                            <input type="checkbox">
+                        </figure>
+
+                        <figure>
+                            <img src="https://github.com/mag-da-lenka/HYF-heptapods/blob/master/hw3-bag.jpg?raw=true"
+                                alt="a pic of my bag on sth fluffy">
+                            <input type="checkbox">
+                        </figure>
+
+                    </div>
+                    <!--end of inputs step 3 part-2-->
+
+
+                    <div class="navigation-bar-steps">
+                        <label for="tab2" class="navigation">Take me to step 2</label>
+                        <label for="tab4" id="label4" class="navigation">Take me to step 4</label>
+                    </div>
+
+                </div>
+                <!--end of div=class"tab3"-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="tab4">
+
+                    <h2>Sign up to your-squirrel-tailor.com</h2>
+                    <h3>Step 4/4 - Time to learn about your preferences</h3>
+                    <p>Progress: </p>
+                    <progress max="100" value="90"></progress>
+                    <p>Please fill in your payment data</p>
+
+
+                    <div class="inputs">
+
+                        <label for="nameoncard">Name on card*</label>
+                        <input type="nameoncard" class="input-required" id="nameoncard" name="nameoncard"
+                            placeholder="Name on card" required>
+
+                        <label for="cardtype">Card type *</label>
+                        <select class="drop-menu-style" id="cardtype" name="cardtype" required>
+                            <option value="VISA">Visa</option>
+                            <option value="American Express">American Express</option>
+                            <option value="Mastercard">Mastercard</option>
+                        </select>
+
+                        <label for="creditcardnumber">Credit card number*</label>
+                        <input type="creditcardnumber" class="input-required" id="creditcardnumber"
+                            name="creditcardnumber" placeholder="1234 0000 0000 0000" required>
+
+                        <label for="firstname">First name*</label>
+                        <input type="text" class="input-required" id="firstname" name="firstname"
+                            placeholder="insert first name" required>
+
+                        <label for="expirymonth">Expiry month*</label>
+                        <input type="expirymonth" class="input-required" id="expirymonth" name="expirymonth"
+                            placeholder="00" required>
+
+                        <label for="expiryyear">Expiry year*</label>
+                        <input type="expiryyear" class="input-required" id="expiryyear" name="expiryyear"
+                            placeholder="00" required>
+
+                        <label for="ccv">CCV*</label>
+                        <input type="ccv" class="input-required" id="ccv" name="ccv" placeholder="000" required>
+
+                    </div>
+                    <!--end of inputs step 4-->
+
+
+
+                    <div class="navigation-bar-steps">
+                        <label for="tab3" class="navigation">Take me to the step 3</label>
+                    </div>
+
+                    <input type="submit" id="submit">
+
+
+
+                </div>
+                <!--end of div=class"tab4"-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </section>
+            <!--- FIXED! section zamyka granatową section -->
+
+
+
+
+        </div>
+        <!--- FIXED! div zamyka fioletowy div class="pc-tab"-->
+
+
+
+
+
+
+    </form> <!-- zamknięty poprawnie czerwony form-->
+    <script src="main-hyf12-homework-week03-form-mag.js"></script>
+
+
+
+
+
+</body> <!-- zamknięta poprawnie szara nitka body-->
+
+
+
+
+
+</html>

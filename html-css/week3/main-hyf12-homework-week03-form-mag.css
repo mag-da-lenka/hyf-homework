@@ -1,0 +1,322 @@
+
+
+/*-------------------------- this is where my additions start -----------------------------------*/
+
+
+/*---------NAV--------------------------*/
+
+.top-bar {
+    width: 100%; 
+    margin-bottom: 3%;
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: nowrap; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    -border: solid 5px deeppink;
+} 
+  
+figure {
+    width: 100px;  
+    margin: 0% 0% 0% 0%;/*top-right-bottom-left*/
+    padding: 0% 0% 0% 0%;/*top-right-bottom-left*/
+    -border: dotted 5px yellow; 
+    border-radius: 20px;
+}
+  
+.logo-pic {
+    width: 100%;
+    height: 100%;  
+}
+  
+nav {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: flex-end; 
+    width: 60%;
+    margin: 0% 0% 0% 0%;/*top-right-bottom-left*/
+    padding: 0% 0% 0% 0%;/*top-right-bottom-left*/
+    -border: solid 5px yellow; 
+    border-radius: 20px;
+} 
+  
+nav > a {
+    margin: 0% 0% 0% 0%;/*top-right-bottom-left*/
+    padding: 0% 0% 0% 0%;/*top-right-bottom-left*/ 
+    width: 23%; 
+    text-align: center;
+}
+
+
+a {
+    margin: 0% 0% 0% 0%;/*top-right-bottom-left*/
+    padding: 0.25% 0.25% 0.25% 0%;/*top-right-bottom-left*/
+    background-color: none; 
+    border: solid 2px rgb(16, 185, 129);
+    border-radius: 10px;
+}
+  
+a:link {
+    color:rgb(44, 44, 44);
+    font-weight: bold;
+    font-size: 1.0em;
+  }
+  
+a:visited {
+    color: rgb(116, 116, 116);
+  }
+  
+a:hover,
+a:active,
+a:focus {
+    background-color: yellowgreen; 
+    opacity: 0.9;
+}
+
+/*---------NAV---end-----------------------*/
+
+
+
+
+
+
+.tab1, .tab2, .tab3, .tab4 {
+    border: black 3px solid; /*this is any of the four tabs = pages*/
+    border-radius: 10px; 
+    margin-bottom: 5%;
+}
+
+
+progress[value] {
+    /* Reset the default appearance */
+    -webkit-appearance: none;
+    appearance: none;
+    width: 300px;
+    height: 30px;
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+
+.alt-address {
+    display: block; /*this is the hidden field in tab 1 which becomes visible when unchecked*/
+    border: 1px solid lightgray; 
+    border-radius: 5px; 
+} 
+
+.shipping-address input:checked ~.alt-address { 
+  display: none; /*this is way to hide alt-address container*/
+}
+
+#tab1, #tab2, #tab3, #tab4 { 
+    display: inline-block; /*this is way to see the tabs work on radio buttons ---> yaaaaaaay*/
+}
+
+/*-------------------------- this is where my additions end --------------------------------------*/
+
+
+
+
+
+/* Component Needs */
+
+.pc-tab>input, .pc-tab section>div {
+    display: none;
+}
+
+
+#tab1:checked~section .tab1, 
+#tab2:checked~section .tab2, 
+#tab3:checked~section .tab3, 
+#tab4:checked~section .tab4 {
+    display: block;
+}
+
+
+*, 
+*:after, 
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* font family added */
+}
+
+
+body {
+    -webkit-font-smoothing: antialiased;
+    background: orange; /* colour changed */
+}
+
+
+h1 {
+    margin: 0 auto;
+    width: 300px; 
+    border: 3px solid white; 
+    border-radius: 10px; 
+    text-align: center;
+    font-weight: 500;
+    font-size: 55px;
+    color: white; /* style changed */
+}
+
+h2, h3 {
+    color: black; 
+    font-weight: 600; /* style added */
+}
+
+
+.pc-tab {  /*this is the tab with radio buttons on top*/
+    width: 100%;  
+    max-width: 700px;
+    margin: 0 auto; 
+    -border: 6px dotted white;
+}
+
+.pc-tab ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navigation-bar-steps {
+    -border: solid 3px red;  
+    display: flex; 
+    justify-content: space-between;
+}
+
+.pc-tab label.navigation  { /*this is any of the navigation bars leading to previous/next step*/
+    display: block; 
+    padding: 15px; 
+    border-bottom: 0;
+    cursor : pointer;
+    border: 2px solid green; 
+    border-radius: 5px; 
+    width: 30%;
+}
+
+.fake-navi-button {
+    color: white;
+    display: block; 
+    padding: 15px; 
+    border-bottom: 0;
+    cursor : pointer;
+    -border: 2px dotted green; 
+    border-radius: 5px; 
+    width: 30%; 
+}
+
+.inputs {   /*this is the box with inputs*/
+    border: 2px solid orange;                
+    border-radius: 5px; 
+    margin-bottom: 3%;
+}
+
+
+input, .drop-menu-style, .text-area-style {    /*these are the input boxes themselves*/
+    -width: 70%; /*added by me but it messed the radio buttons and checkboxes = PURE EVIL*/
+    margin: 10px 0px 10px 0px;                    
+    padding: 2px;
+    display: block; /*I switched it off*/ 
+    -display: flex; 
+    -flex-direction: column; 
+    border: 1px solid lightgray; 
+    -border: 3px solid deeppink; 
+    border-radius: 5px; 
+    webkit-appearance: none; /*It was off*/ 
+                             /*I switched it on b/c I want to bring the input style for radio buttons to default browser setting*/
+}
+
+.text-area-style {
+    width: auto; 
+    height: 100px;
+}
+
+
+
+#img-container,  #checkbox-container-step3 {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    margin: 0% 0% 2% 0%;  
+    padding: 10px;
+}
+
+
+
+figure {
+    -border: 2px solid pink;
+    -border-radius: 10px; 
+    width: 150px; 
+    text-align: left; 
+    margin: 0% 0% 1% 0%; 
+    padding: 0; 
+}
+
+img {
+    width: 100%;
+}
+
+
+
+#tab1:checked ~ nav .tab1 label, 
+#tab2:checked ~ nav .tab2 label, 
+#tab3:checked ~ nav .tab3 label, 
+#tab4:checked ~ nav .tab4 label {
+    background: #fff;
+    position: relative;
+}
+
+#tab1:checked ~ nav .tab1 label:after, 
+#tab2:checked ~ nav .tab2 label:after, 
+#tab3:checked ~ nav .tab3 label:after, 
+#tab4:checked ~ nav .tab4 label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    left: 0;
+    bottom: -1px;
+}
+
+section div {
+    padding: 20px;
+    width: 100%;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+
+section div h2 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+button {
+    background: none;
+    border: 1px solid #000;
+    border-radius: 2px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .pc-tab ul {
+       flex-direction: column;
+    }
+    .pc-tab li {
+        width: 100%;
+     }
+
+    label:after {
+        height : 0px !important;
+    }
+  }
+
+
