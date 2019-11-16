@@ -55,7 +55,7 @@ function getFullname(firstName, surName, formalTitle) {
 
 
      } else if (firstName.length >= 2 && surName.length >= 2) { // eg. sth like: Magdalena Voigt   or   Ma Vo 
-          return `You have typed: ${fullName} (This is your full name without title. Make sure each of them is min.2 letters long. If that's correct -> all _required_ info provided. Thak you.)`; 
+          return `You have typed: ${fullName} (This is your full name without title. Make sure each of them is min.2 letters long. If that's correct -> all _required_ info provided. Thak you.)`;
 
 
      } else (firstName.length < 1 && surName.length < 1)
@@ -128,24 +128,33 @@ console.log(getFullname1('', '', '')); // ---> We cannot save this. Your first a
 
 
 
-// // 3.
-// // Event application
-// // The customer works on their calendar application. They need some functionality to help with writing what weekday an event is held.
-// // You specify how many days from today an event is being held. The function then figures out what weekday the event is being held. 
-// // Here is an example: Today is Sunday and the event is in 5 days. Therefore the event will be held on a friday.
-
-// // With todays weekday a tuesday
-// console.log(getEventWeekday(9)); // Logs out "Thursday"
-
-// // With todays weekday a Friday
-// console.log(getEventWeekday(2)); // Logs out "Sunday"
-// // You should get the today's day from the system.
-// // Hint: use remainder operator, array indexes and investigate new Date in js.
+// 3.    Event application  
 
 
+// brain stimulation: https://www.w3schools.com/jsref/jsref_getday.asp and https://www.w3schools.com/jsref/jsref_getdate.asp <3 
+// new Date() --->  Sat Nov 16 2019 11:58:08 GMT+0100 (Central European Standard Time)  // new Date().getDay() //console.log(new Date().getDay()); ---> 6 <--- because today is Sat, Sunday would be 0 ---> 1-2-3-4-5-6-0 
+// more brain stimulation: https://www.w3schools.com/js/js_arithmetic.asp    %   <3
 
+function getEventWeekday(daysLeftToEvent) {
+     let daysoftheWeek = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]; 0 - 1 - 2 - 3 - 4 - 5 - 6
+     return `Today is ${new Date()}. Your next gig takes place on ${daysoftheWeek[(daysLeftToEvent + new Date().getDay()) % (daysoftheWeek.length)]} `;
+     //so eg. Today is Sat. Your gig takes place daysoftheWeek index --> [] = --->    // [(2 days left    +     6 as for Sat)      % 6] = 8 % 6 gives 2. And 2 is the index of Tuesday in my array.
+}
 
+// You specify how many days from today an event is being held in the parameter, eg. 2 // The function then figures out what weekday the event is being held.
+console.log(getEventWeekday(0));  // today=Sat ---> event=Sun  
+console.log(getEventWeekday(1));  // today=Sat ---> event=Mon
+console.log(getEventWeekday(2));  // today=Sat ---> event=Tue  ---> This is what I checked in the comment above // Today is Sat Nov 16 2019 12:35:21 GMT+0100 (Central European Standard Time). Your next gig takes place on Tue 
+console.log(getEventWeekday(3));  // today=Sat ---> event=Wed
+console.log(getEventWeekday(4));  // today=Sat ---> event=Thu
+console.log(getEventWeekday(5));  // today=Sat ---> event=Fri
+console.log(getEventWeekday(6));  // today=Sat ---> event=Sat
 
+console.log(getEventWeekday(7));  // today=Sat ---> event=Sun
+
+console.log(getEventWeekday(8));  // today=Sat ---> event=Mon
+console.log(getEventWeekday(15)); // today=Sat ---> event=Mon
+console.log(getEventWeekday(22)); // today=Sat ---> event=Mon
 
 
 
@@ -174,8 +183,9 @@ function properClothes(temperature) {
      } else if (temperature > 17 && temperature <= 47) {
           return `Wherever you are, it's warm. Wear bikini and go swimming. Drink a lot.`;
 
-     } else { 
-          return `ARE YOU IN HELL? Wear sth fancy!` }
+     } else {
+          return `ARE YOU IN HELL? Wear sth fancy!`
+     }
 
 }
 
@@ -194,7 +204,7 @@ console.log(properClothes(16));
 properClothes(16);
 console.log(properClothes(26));
 properClothes(666);
-console.log(properClothes(666)); 
+console.log(properClothes(666));
 
 
 
@@ -202,8 +212,64 @@ console.log(properClothes(666));
 
 
 
-// 5. Student manager
+// 5. Student manager 
 
-// 6. Candy helper*
+// Figure out how Array.push works. ---> https://www.w3schools.com/jsref/jsref_push.asp 
+
+const class07Students = [];
+
+function addStudentToClass(studentName) {
+
+     if (!studentName) {
+          return 'Please provide the name';
+
+     } if (studentName === "Queen") { // the evaluation for "Queen" has to be on top, otherwise the function would stop too soon and not let "Queen" join! 
+          return `${class07Students.push(studentName)} It is an honour to have you with us, Dear Queen!`;
+
+
+     } if ((class07Students.length < 6) && ((studentName) !== (class07Students.indexOf(studentName)))) { //now we set the limit to 6 spots once the "Queen" has got the garantee she could join as the 7th student. 
+          return `${class07Students.push(studentName)} Hello New Student! Your name (${studentName}) has been added to the list.`;
+
+     } else (studentName === class07Students.indexOf(studentName))  // https://www.w3schools.com/jsref/jsref_indexof_array.asp (here's how to check (=compare!) whether or not the name is already on the list)
+     return `The name (${studentName}) has already been added to the list. You don't need a double spot... Shame on you!`;
+
+}
+
+console.log(addStudentToClass(""));
+
+console.log(addStudentToClass("Fake Queen Anabella"));
+console.log(addStudentToClass("Fake Queen Isabella"));
+console.log(addStudentToClass("Fake Queen Manuela"));
+console.log(addStudentToClass("Fake Queen Isadora"));
+console.log(addStudentToClass("Fake Queen Elizabeth"));
+console.log(addStudentToClass("Fake Queen Barbarella"));
+
+console.log(addStudentToClass("Fake Queen Anabella"));
+console.log(addStudentToClass("Fake Queen Isabella"));
+
+console.log(addStudentToClass("Queen"));
+
+
+
+function getNumberOfStudents() {
+     return `${class07Students.length}`
+}
+console.log(getNumberOfStudents());
+
+
+
+
+
+
+
+
+
+
+// 6. Candy helper*      //   I might try later :) 
+
+
+
+
+
 
 // 7. Rover the Robot*
