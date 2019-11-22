@@ -22,8 +22,13 @@ names.splice(1, 1); // replaces 1 element at index 1 with nothingness :>
 console.log(names); // expected:  ['Peter', 'Yana', 'kristina', 'Rasmus', 'Samuel', 'katrine', 'Tala'] 
 //                       result:  ["Peter", "Yana", "kristina", "Rasmus", "Samuel", "katrine", "Tala"]
 
-
-
+--Badr advice review
+/* I would do it in a different way, let say that we know that 'Ahmed' should be deleted, what we don't know 
+is that the array disposition can change, so we can store the name in a variable by doing:
+const nameToRemove=names.indexOf('Ahmed') by doing this we know for fact that even if the disposition change , our
+variable value will change as well.
+Then do names.spilce(1,nameToRemove)
+*/
 
 
 
@@ -39,10 +44,13 @@ let travelInformation = { //variable --> object with 2 keys
 // console.log(travelInformation.speed);  //  just testing if I can access the keys :>
 // console.log(travelInformation.distance);
 
-function howLong() {
-
-     let mySpeed = travelInformation.speed;
-     let myDistance = travelInformation.distance;
+function howLong(myTravelInfo) {//you have to pass the argument inside the function
+/* Becuase when you pass the parameters in your function ,as you have done below, you have to make sure that you pass the same
+parameter as argument on the function , as I have done here, NOTE: you have to change the name
+it shouldn't be the same name.
+*/ 
+     let mySpeed = myTravelInfo.speed;
+     let myDistance = myTravelInfo.distance;
      let resultInMinutes = myDistance * 60 / mySpeed; // common knowledge: if we cover 50 km in 60 mins, then we cover 432 km in 518,4 mins    
      // console.log(`Your journey will take ${resultInMinutes} minutes`); 
 
@@ -91,9 +99,15 @@ let seriesDurations = [ //an array with 3 objects
           minutes: 47,
      }     // NO comma
 
-]; // is the semicolon necessary? 
+]; // is the semicolon necessary? It depends if you have some prettier extension on your IDE,but it shouldn't cause any problem, in this case 
 
 // console.log(typeof (seriesDurations)); // ---> object! but it is an array with 3 objects!
+/*Yes arrays are object , but we don't confuse them with the Object.
+However, unlike regular objects, arrays have certain special features.
+Arrays have an object in their prototype solution - named Array.prototype.
+This contains all the methods that we use for Array such array.lenght , array.spilice, ecc..
+
+*/
 // console.log(seriesDurations[0].title); // ---> Game of Thrones 
 // console.log(seriesDurations[1].days);  // ---> 7
 // console.log(seriesDurations.length);   // ---> 3
@@ -108,7 +122,10 @@ function showMeWhatIveDoneWithMyLife(seriesDurations, myAge) {
      // console.log(`THIS SHOWS myAge: ${myAge}.`); // ---> 39
      // console.log(`THIS SHOWS myLifeinMinutes: ${myLifeinMinutes}.`); // ---> 20512440 <--- (20.512.440,00)  
 
-     console.log(`(Not so) fun fact: the length of my life is ${myAge} years and that equals ${myLifeinMinutes} minutes!`);  ///HOW TO ESCAPE THE LOOP tp avoid repetition?
+     console.log(`(Not so) fun fact: the length of my life is ${myAge} years and that equals ${myLifeinMinutes} minutes!`);  
+///HOW TO ESCAPE THE LOOP tp avoid repetition?
+// you are logging inside the for loop , so for fact per each i< of your array length , will display the result.
+// you cannot break a for unless you a defined statement such "if" that put a condition to the for to break, but not your case.
 
      for (i = 0; i < seriesDurations.length; i++) {    // a little loop to help display things by chosen criteria   
 
