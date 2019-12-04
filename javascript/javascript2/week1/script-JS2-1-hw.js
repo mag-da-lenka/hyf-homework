@@ -1,0 +1,87 @@
+console.log(`Hello World! / Parallel world connection test.`)
+console.log(`This is HOMEWORK JS2-1 week-09 by Magdalena /HYF /class 12.`);
+
+
+
+// Find the shortest word // Write a function that finds the shortest word of an array of words
+
+let danishWords = ['bil', 'plante', 'kaffe', 'bog', 'ø', 'planetarium'];
+// console.log(danishWords);                // ---> (6) ["bil", "plante", "kaffe", "bog", "ø", "planetarium"]
+// console.log(danishWords.length);         // ---> 6
+// console.log(danishWords.indexOf('ø'));   // ---> 4
+// console.log(danishWords[4]);             // ---> ø
+// console.log(danishWords[4].length);      // ---> 1   
+
+function findTheShortestWord(danishWords) {  // returns 'ø'
+    for (let i = 0; i < danishWords.length; i++) {
+        // console.log(danishWords[i]) 
+        if (danishWords[i].length === 1) {
+            return `The shortest Danish word is ${danishWords[i]}.`;
+        };
+    }
+}
+
+console.log(findTheShortestWord(danishWords));
+
+
+
+
+
+// Difference between median and average 
+
+// Quick math check: 
+// console.log((3000000 + 3500000 + 1300000 + 40000000 + 100000000 + 8000000 + 2100000) / 7)     // ---> 22,557,143    // this is average
+// console.log(40000000 / 2)                                                                     // ---> 40,000,000    // this is median lvl easy
+// console.log((40000000 / 2) + (40000000 / 2 + 1))                                              // ---> 40,000,001    // this is median lvl advanced
+// console.log(((40000000 / 2) + (40000000 / 2 + 1)) / 2)                                        // ---> 20,000,000.5  // this is the average of median lvl ease and median lvl addvanced
+
+let housePrices = [3000000, 3500000, 1300000, 40000000, 100000000, 8000000, 2100000];  // index --> 0 1 2 3 4 5 6 length ---> 7 
+
+
+// Make a function that takes an array as parameter and returns the average of that parameter 
+function getAverage(housePrices) {
+
+    let pricesSum = 0;
+
+    for (let i = 0; i < housePrices.length; i++) {
+        pricesSum = pricesSum + housePrices[i];
+    }
+
+    // console.log((3000000 + 3500000 + 1300000 + 40000000 + 100000000 + 8000000 + 2100000)) // --->  157,900,000
+    // console.log(pricesSum);                                                               // ---> 157,900,000
+    let average = pricesSum / housePrices.length;                                            // ---> 157,900,000 / 7 ---> 22557142.85714286
+    return `The averageof the housePrices array is ${average}. ---> the sum of all the prices divided by the number of prices`;
+
+}
+
+console.log(getAverage(housePrices)); // ---> 22557142.85714286
+
+
+// Make a function that takes an array as parameter and returns the median of that parameter
+function getMedian(housePrices) {
+
+    let middleIndex = Math.floor(housePrices.length / 2);
+    // console.log(middleIndex); //---> 4
+    let median = housePrices[middleIndex];
+    return `The median of the housePrices array is ${median}.`; // ---> 
+
+}
+
+console.log(getMedian(housePrices)); // ---> 40,000,000
+
+
+// Now create a function that calculates the median and the average and returns these two value in an object. // use the functions on this array
+function getAverageAndMedian(housePrices) {
+
+    let objectWithAverageAndMedian = {
+        averageKey: getAverage(housePrices), // comma
+        medianKey: getMedian(housePrices)   // NO comma
+    }
+
+    return `Here's what objectWithAverageAndMedian says:  
+    1) ${objectWithAverageAndMedian.averageKey}. 
+    2) ${objectWithAverageAndMedian.medianKey}`
+
+}
+
+console.log(getAverageAndMedian(housePrices));
