@@ -1,9 +1,11 @@
-console.log(`Hello World! / Parallel world connection test.`)
+console.log(`Hello World! Hello Kitty! / Parallel world connection test.`)
 console.log(`This is HOMEWORK JS2-1 week-09 by Magdalena /HYF /class 12.`);
 
 
 
-// Find the shortest word // Write a function that finds the shortest word of an array of words
+
+
+// 1. ---> FIND THE SHORTEST WORD  --->  Write a function that finds the shortest word of an array of words -------------------------------------------------------------------------------------------------------
 
 let danishWords = ['bil', 'plante', 'kaffe', 'bog', 'ø', 'planetarium'];
 // console.log(danishWords);                // ---> (6) ["bil", "plante", "kaffe", "bog", "ø", "planetarium"]
@@ -23,11 +25,13 @@ function findTheShortestWord(danishWords) {  // returns 'ø'
 
 console.log(findTheShortestWord(danishWords));
 
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
 
-// Difference between median and average 
+
+// 2. ---> DIFFERENCE BETWEEN MEDIAN AND AVERAGE ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 // Quick math check: 
 // console.log((3000000 + 3500000 + 1300000 + 40000000 + 100000000 + 8000000 + 2100000) / 7)     // ---> 22,557,143    // this is average
@@ -47,9 +51,10 @@ function getAverage(housePrices) {
         pricesSum = pricesSum + housePrices[i];
     }
 
-    // console.log((3000000 + 3500000 + 1300000 + 40000000 + 100000000 + 8000000 + 2100000)) // --->  157,900,000
+    // console.log((3000000 + 3500000 + 1300000 + 40000000 + 100000000 + 8000000 + 2100000)) // ---> 157,900,000
     // console.log(pricesSum);                                                               // ---> 157,900,000
-    let average = pricesSum / housePrices.length;                                            // ---> 157,900,000 / 7 ---> 22557142.85714286
+    // let averageOldVersion = pricesSum / housePrices.length;                               // ---> 157,900,000 / 7 ---> 22557142.85714286
+    let average = Math.round(pricesSum / housePrices.length);                                // ---> 157,900,000 / 7 ---> 22557142
     return `The averageof the housePrices array is ${average}. ---> the sum of all the prices divided by the number of prices`;
 
 }
@@ -85,3 +90,88 @@ function getAverageAndMedian(housePrices) {
 }
 
 console.log(getAverageAndMedian(housePrices));
+
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+// // 3. ---> SPIRIT ANIMAL NAME GENERATOR ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+// 3a: function with a parameter (no connection with html because I couldn't make it work)
+
+let firstWordsX = ["Drunk", "Stoned", "Forrest", "Mortal", "Fluffy", "Cyber", "Hardworking", "Squeeshy", "Martian", "Smart"];
+let secondWordsX = ["Koala", "Kitty", "Squirrel", "Fluffling", "Squirrel", "Bunny", "Alpaca", "Hedgehog", "Robot", "Wolf"];
+let spiritAnimalX = firstWordsX[Math.floor(Math.random() * firstWordsX.length)] + " " + secondWordsX[Math.floor(Math.random() * secondWordsX.length)];
+
+function getSpiritAnimal(name) {
+    if (!name) {
+        return `Your name box look empty. You've typed --->     <--- Please try again. *** Btw the input tested here is: ${name}`;
+    }
+    else if (typeof (name) === typeof ('somerandomstring')) {
+        return `Hi ${name}. Your spirit animal is ${spiritAnimalX}`;
+    }
+    else if (typeof (name) === typeof (666)) {
+        return `Errrrm. Duuude... That is a number. You've typed ---> ${name}... o_O ...srsly? `
+    }
+}
+
+console.log(getSpiritAnimal('Benjamin Button'));  // --->  
+console.log(getSpiritAnimal('Magda'));            // --->  
+console.log(getSpiritAnimal(666));                // --->  
+console.log(getSpiritAnimal());                   // --->  
+console.log(getSpiritAnimal(""));                 // --->  
+console.log(getSpiritAnimal(null));               // --->
+
+
+
+// 3b: function without parameters (no connection with html)
+
+
+function getSpiritAnimalName() {
+
+
+
+    let adjectives = ["Drunk", "Stoned", "Forrest", "Mortal", "Fluffy", "Cyber", "Hardworking", "Squeeshy", "Martian", "Smart"];
+    let nouns = ["Koala", "Kitty", "Squirrel", "Fluffling", "Squirrel", "Bunny", "Alpaca", "Hedgehog", "Robot", "Wolf"];
+
+    let randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)];
+    let randomNoun = nouns[Math.floor(Math.random() * nouns.length)];
+    // console.log(randomAdjective); console.log(typeof (randomAdjective)); console.log(randomNoun); console.log(typeof (randomNoun)); // test: all good
+
+    let theTypedName = document.getElementById("typedName").value;
+    let theNameResult = document.getElementById("result-displayed");
+
+    if (!theTypedName) {
+        alert(`Hey, please type something that at least vaguely resembles a human name.`)
+    }
+
+    else {
+        theNameResult.innerText = `Hey ${theTypedName}! 
+        Your spirit animal is ${randomAdjective} ${randomNoun}.`;
+        console.log(`Hey ${theTypedName}! Your spirit animal is --->  ${randomAdjective} ${randomNoun}.`)
+    }
+
+}
+
+let daButton = document.getElementById("animalize-button");
+daButton.addEventListener("click", getSpiritAnimalName);
+
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
