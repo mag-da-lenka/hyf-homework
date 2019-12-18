@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;  margin: auto; 
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html, body {
+  margin: 1% 0% 1% 0%;/*top-right-bottom-left*/  padding: 0% 0% 0% 0%;/*top-right-bottom-left*/
+  display: block;
+}
+
+h1, h2 {
+  margin: 1% 0% 1% 0%;/*top-right-bottom-left*/  padding: 0% 0% 0% 5%;/*top-right-bottom-left*/
+  font-size: 20px;  line-height: 1.30em;   color: rgb(66, 66, 100);
+}
+
+p {
+  margin: 1% 0% 1% 0%;/*top-right-bottom-left*/  padding: 0% 0% 0% 5%;/*top-right-bottom-left*/
+  color: rgb(93, 104, 100);
+}
+
+
+input[type=text] {
+  width: 250px; height: 50px;  padding: 1% 1% 1% 1%; margin: 1% 0% 1% 70px; 
+  border: 1px solid #ccc; border-radius: 5px; font-size: 17px;
+  background-color: rgb(245, 245, 255); box-shadow: 10px 10px 8px #d6d6d6;
+}
+
+button {
+  width: 100px;  padding: 1% 1% 1% 1%;   margin: 1% 0% 1% 220px; 
+  border: 1px solid rgb(110, 110, 110);  border-radius: 5px;
+  color: white; background-color:rgb(118, 119, 184);  box-shadow: 10px 10px 8px #d6d6d6;
+  cursor: pointer;  text-align: center; font-size: 17px;
+}
+
+button:hover {
+  background-color: rgb(255, 166, 0);
+}
+
+#result-displayed {
+  margin: 1% 0% 5% 70px;/*top-right-bottom-left*/  padding: 0% 0% 0% 5%;/*top-right-bottom-left*/
+  font-size: 20px;  line-height: 1.30em;   color: rgb(118, 119, 184);
+}
+
+
+/*-----THIS IS THE END OF DESKTOP SIZE CSS--------------------------------------------------THIS IS THE END OF DESKTOP SIZE CSS-----*/  
