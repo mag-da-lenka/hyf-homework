@@ -8,6 +8,7 @@ Tasks: https://github.com/HackYourFuture-CPH/JavaScript/blob/master/javascript2/
 Files: https://github.com/mag-da-lenka/hyf-homework/tree/master/javascript/javascript2/week2
 
 
+
 1. Doubling of number 
 
 2. Working with movies
