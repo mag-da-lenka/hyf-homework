@@ -13,11 +13,11 @@ Files: https://github.com/mag-da-lenka/hyf-homework/tree/master/javascript/javas
 
 2. Working with movies
 
-   Preview ---> ex. 1-2 clean = no console.logs etc.: 'https://mag-da-lenka.github.io/hyf-homework/javascript/javascript2/week2/index-JS2-2-hw'
+   Preview ---> ex. 1-2 clean = no console.logs etc.: 'https://mag-da-lenka.github.io/hyf-homework/javascript/javascript2/week2/index-JS2-2-hw.html'
 
-   Preview ---> ex. 1-2 with all the notes: 'https://mag-da-lenka.github.io/hyf-homework/javascript/javascript2/week2/draft-index-JS2-2-hw'
+   Preview ---> ex. 1-2 with all the notes: 'https://mag-da-lenka.github.io/hyf-homework/javascript/javascript2/week2/draft-index-JS2-2-hw.html'
 
 
 3. hyfBay 2
 
-   Preview ---> HYF BAY 2: 'https://mag-da-lenka.github.io/hyf-homework/javascript/javascript2/week2/hyfBay2-index'
+   Preview ---> HYF BAY 2: 'https://mag-da-lenka.github.io/hyf-homework/javascript/javascript2/week2/hyfBay2-index.html'
