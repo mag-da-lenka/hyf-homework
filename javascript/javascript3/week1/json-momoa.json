@@ -1,0 +1,49 @@
+{
+    "the Squirrel Object taxonomy": {
+        "kingdom": "animalia",
+        "order": "rodentia",
+        "sub-order": "squirrel-like",
+        "genus": "DOM tree squirrels"
+    },
+    "cyber-enhancements": true,
+    "year of assembly": 2980,
+    "movement skills": {
+        "jumpability lvl": "high",
+        "swimmability lvl": "wobbly - aspiring"
+    },
+    "colour scope": {
+        "HEX": 923000,
+        "saturation": 0.8
+    },
+    "languages": {
+        "JS": "basic",
+        "Polish": "native",
+        "Arabic": null,
+        "English": "fluent"
+    },
+    "friends": [
+        {
+            "id": 1,
+            "name": "Gryzelda",
+            "species": "cat-like floof",
+            "skills set": [
+                "refusing",
+                "scratching",
+                "wide tantrum scope"
+            ],
+            "weight in kilos": 4,
+            "year of assembly": 2011
+        },
+        {
+            "id": 2,
+            "name": "Brunhilda",
+            "species": "cat-like floof v. extreme",
+            "skills set": [
+                "ultra high speed food absorption",
+                "bambi eyes mode"
+            ],
+            "weight in kilos": 6,
+            "year of assembly": 2016
+        }
+    ]
+}
