@@ -7,7 +7,7 @@ SELECT * FROM squirrels_tasks;
 SELECT * FROM tasks_tags;  
 
 SELECT * FROM      squirrels JOIN squirrels_tasks   ON squirrels.id               =  squirrels_tasks.squirrel_id 
-			     JOIN tasks             ON squirrels_tasks.task_id    =  tasks.id 
+			       JOIN tasks             ON squirrels_tasks.task_id    =  tasks.id 
                              JOIN tasks_tags        ON tasks_tags.task_id         =  tasks.id 
                              JOIN tags              ON tasks_tags.tag_id          =  tags.id;
 
