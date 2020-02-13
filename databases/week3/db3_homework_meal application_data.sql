@@ -38,7 +38,7 @@ CREATE TABLE `review` (
 -- test
 SELECT * FROM 
 reservation JOIN meal   on reservation.meal_id = meal.id
-			JOIN review on review.meal_id = meal.id; 
+	    JOIN review on review.meal_id = meal.id; 
 
 -- meal
 INSERT INTO meal (id, title,              description,                     location,        `when`,                  max_reservations,  price,      created_date ) 
