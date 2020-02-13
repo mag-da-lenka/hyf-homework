@@ -11,14 +11,14 @@ SELECT * FROM meal; SELECT * FROM reservation; SELECT * FROM review;
 
 SELECT * FROM 
 reservation JOIN meal   on reservation.meal_id = meal.id
-			JOIN review on review.meal_id      = meal.id; 
+	    JOIN review on review.meal_id      = meal.id; 
 SELECT
 meal.id AS `MEAL_id`, meal.title AS `MEAL_title`, meal.description AS `MEAL_description`, meal.location AS `MEAL_location`, meal.when AS `MEAL_when`, meal.max_reservations AS `MEAL_max_reservations`, meal.price AS `MEAL_price`, meal.created_date as `MEAL_created_date`,
 reservation.id AS `RESERVATION_id`, reservation.number_of_guests AS `RESERVATION_number_of_guests`, reservation.meal_id AS `RESERVATION_meal_id`, reservation.created_date AS `RESERVATION_created_date`,  
 review.id AS `REVIEW_id`, review.title AS `REVIEW_title`, review.description AS `REVIEW_description`, review.meal_id AS `REVIEW_meal_id`, review.stars AS `REVIEW_stars`
 FROM 
 reservation JOIN meal   on reservation.meal_id = meal.id
-			JOIN review on review.meal_id      = meal.id;
+	    JOIN review on review.meal_id      = meal.id;
 
 
 -- MEAL --
@@ -147,7 +147,7 @@ SELECT * FROM meal LIMIT 3;
 SELECT meal.title AS `MEAL_title`,  review.stars AS `REVIEW_stars`
 FROM 
 reservation JOIN meal   on reservation.meal_id = meal.id
-			JOIN review on review.meal_id      = meal.id
+	    JOIN review on review.meal_id      = meal.id
 WHERE review.stars > 7;
 
 -- Get reservations for a specific meal sorted by created_date 
@@ -156,7 +156,7 @@ meal.title AS `MEAL_title`, meal.description AS `MEAL_description`, meal.created
 reservation.created_date AS `RESERVATION_created_date`
 FROM 
 reservation JOIN meal   on reservation.meal_id = meal.id
-			JOIN review on review.meal_id      = meal.id 
+	    JOIN review on review.meal_id      = meal.id 
 ORDER BY meal.created_date; 
 -- or 
 SELECT
@@ -164,7 +164,7 @@ meal.title AS `MEAL_title`, meal.description AS `MEAL_description`, meal.created
 reservation.created_date AS `RESERVATION_created_date`
 FROM 
 reservation JOIN meal   on reservation.meal_id = meal.id
-			JOIN review on review.meal_id      = meal.id 
+	    JOIN review on review.meal_id      = meal.id 
 ORDER BY reservation.created_date;
 
 
@@ -174,7 +174,7 @@ meal.title AS `MEAL_title`, meal.description AS `MEAL_description`, meal.created
 review.stars AS `REVIEW_stars`
 FROM 
 reservation JOIN meal   on reservation.meal_id = meal.id
-			JOIN review on review.meal_id      = meal.id
+	    JOIN review on review.meal_id      = meal.id
 -- GROUP BY review.stars
 ORDER BY review.stars; -- ??????????????????????????????????????????
 --
@@ -183,7 +183,7 @@ meal.title AS `MEAL_title`, meal.description AS `MEAL_description`, meal.created
 review.stars AS `REVIEW_stars`
 FROM 
 reservation JOIN meal   on reservation.meal_id = meal.id
-			JOIN review on review.meal_id      = meal.id
+	    JOIN review on review.meal_id      = meal.id
 GROUP BY review.stars  -- ???????????????????????????????????????????
 -- ORDER BY review.stars
 ; 
@@ -193,4 +193,4 @@ meal.title AS `MEAL_title`, meal.description AS `MEAL_description`, meal.created
 avg(review.stars) AS `REVIEW_stars_avg`
 FROM 
 reservation JOIN meal   on reservation.meal_id = meal.id
-			JOIN review on review.meal_id      = meal.id;  -- nope nope nope
+	    JOIN review on review.meal_id      = meal.id;  -- nope nope nope
