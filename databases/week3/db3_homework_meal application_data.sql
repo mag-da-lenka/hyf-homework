@@ -38,7 +38,7 @@ CREATE TABLE `review` (
 -- test
 SELECT * FROM 
 reservation JOIN meal   on reservation.meal_id = meal.id
-	    JOIN review on review.meal_id = meal.id; 
+			JOIN review on review.meal_id = meal.id; 
 
 -- meal
 INSERT INTO meal (id, title,              description,                     location,        `when`,                  max_reservations,  price,      created_date ) 
@@ -49,6 +49,7 @@ INSERT INTO meal (id, title, description, location, `when`, max_reservations,  p
 VALUES           (3,  'Green Salad', 'Green beabs, grass, asparagus and avocado!', 'Cph Yellow Street',  '2020-06-07 08:00:00',  31,  000678.91, '2020-02-02 08:00:01');  
 INSERT INTO meal (id, title, description, location, `when`, max_reservations,  price,      created_date ) 
 VALUES           (4,  'Pink Salad', 'flamingo feathers, grapefruit juice and 2 beetroots.', 'Cph Green Street',  '2020-06-09 08:00:00',  25,  000110.31, '2020-02-05 08:27:01');  
+
 SELECT * FROM meal; 
 
 
@@ -65,6 +66,7 @@ INSERT INTO reservation (id, number_of_guests, meal_id, created_date )
 VALUES                  (5,  2,                1,       '2020-03-06 09:25:00');  
 INSERT INTO reservation (id, number_of_guests, meal_id, created_date ) 
 VALUES                  (6,  7,                1,       '2020-03-06 09:29:00');  
+
 SELECT * FROM reservation; 
 
 
@@ -87,4 +89,5 @@ INSERT INTO review (id, title, description, meal_id, stars )
 VALUES             (8, 'Yumm!', 'My Barbie doll loved it.', 4, 8); 
 INSERT INTO review (id, title, description, meal_id, stars ) 
 VALUES             (9, 'Good!', 'I\'m a fan. Thanks guys. -Ken, Miami', 4, 9); 
+
 SELECT * FROM review; 
