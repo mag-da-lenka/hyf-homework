@@ -35,7 +35,7 @@ CREATE TABLE `tasks_tags` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `task_id` int(10) unsigned NOT NULL,
   `tag_id` int(10) unsigned NOT NULL,
-  CONSTRAINT `fk_task_id_to_TASKS_id2`        FOREIGN KEY (`task_id`)      REFERENCES     `tasks` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `fk_task_id_to_TASKS_id2`       FOREIGN KEY (`task_id`)      REFERENCES     `tasks` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_tag_id_to_TAGS_id`          FOREIGN KEY (`tag_id`)        REFERENCES      `tags` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci; 
 
@@ -92,9 +92,3 @@ insert into tasks_tags (task_id, tag_id) values(7, 5);
 insert into tasks_tags (task_id, tag_id) values(8, 6);
 insert into tasks_tags (task_id, tag_id) values(9, 6);
 insert into tasks_tags (task_id, tag_id) values(10, 3);
-
-
-
-
-
-
