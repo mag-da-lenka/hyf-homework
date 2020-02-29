@@ -35,7 +35,7 @@
         "id": 5,
         "title": "Polestinian fusion cuisine",
         "maxNumberOfGuests": 16,
-        "description": "Polish and Palestinian fusion cuisine cooked ny two Martians",
+        "description": "Polish and Palestinian fusion cuisine - cooked by two Martians",
         "createdAt": "2019/12/23 15:01",
         "price": 100
     },
@@ -43,7 +43,7 @@
         "id": 6,
         "title": "Pink food in Copenhagen",
         "maxNumberOfGuests": 12,
-        "description": "Have a grapefruit juice prepared by 3 flamingos",
+        "description": "Have some grapefruit juice prepared by 3 flamingos",
         "createdAt": "2019/12/24 12:11",
         "price": 11
     }
