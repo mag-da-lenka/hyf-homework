@@ -12,6 +12,17 @@ const cheapMealsFiltered = jsonMeals.filter((aCheapMeal) => aCheapMeal.price < 1
 
 cheapMealsFiltered.forEach((aMeal) => {
 
+    aMeal.review = jsonReviews
+        .filter(aMealReview => aMealReview.mealId === aMeal.id)
+
+});
+
+
+/*
+// longer version: 
+const cheapMealsFiltered = jsonMeals.filter((aCheapMeal) => aCheapMeal.price < 107);
+cheapMealsFiltered.forEach((aMeal) => {
+
     aMeal.review = [];
 
     jsonReviews.forEach((aReview) => {
@@ -22,7 +33,10 @@ cheapMealsFiltered.forEach((aMeal) => {
 
     });
 
-});
+});  
+
+*/
+
 
 
 app.get('/cheap-meals', (request, response) => {

@@ -8,6 +8,18 @@ const jsonMeals = require(__dirname + '/../data/meals.json');
 const jsonReviews = require(__dirname + '/../data/reviews.json');
 
 
+const largeMealsFiltered = jsonMeals.filter((aLargeMeal) => aLargeMeal.maxNumberOfGuests > 16);
+
+largeMealsFiltered.forEach((aMeal) => {
+
+    aMeal.review = jsonReviews
+        .filter(aMealReview => aMealReview.mealId === aMeal.id)
+
+});
+
+
+/*
+// longer version: 
 const largeMealsFiltered = jsonMeals.filter((aLargeMeal) => aLargeMeal.maxNumberOfGuests > 16);  
 
 largeMealsFiltered.forEach((aMeal) => {
@@ -24,6 +36,7 @@ largeMealsFiltered.forEach((aMeal) => {
 
 });
 
+*/
 
 app.get('/large-meals', (request, response) => {
     response.send(largeMealsFiltered);
