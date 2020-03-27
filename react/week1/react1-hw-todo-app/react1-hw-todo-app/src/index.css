@@ -22,17 +22,7 @@ h1, h2, h3, h4, p {
   margin: 0% 0% 1% 0%;/*top-right-bottom-left*/
   padding: 1% 1% 1% 1%;/*top-right-bottom-left*/
   color: black; 
-  text-align: left;
-  background-color: white;
-  -border: solid 2px mintcream;
-  border-radius: 10px;
-  -box-shadow: 10px 10px 8px #888888;
-} 
-
-.todolist {
-  margin: 0% 0% 10% 0%;/*top-right-bottom-left*/
-  padding: 1% 1% 1% 1%;/*top-right-bottom-left*/
-  color: black; 
+  font-size: 1.0em; 
   text-align: left;
   background-color: white;
   -border: solid 2px mintcream;
@@ -51,8 +41,7 @@ header, footer {
   
 } 
 
-
-.todolist {
+main {
   margin: 2% 0% 5% 0%;/*top-right-bottom-left*/
   padding: 1% 2% 1% 2%;/*top-right-bottom-left*/
   color: black; 

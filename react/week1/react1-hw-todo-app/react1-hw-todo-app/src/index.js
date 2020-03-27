@@ -26,23 +26,20 @@ const myDateFormat_month_name = `${year}/${month_name}/${day_number} (${day_name
 const myDateFormat_month_number1 = `${year + 1}/${month_number}/${day_number} (${day_name})  ${hours}:${minutes}:${seconds} GMT+0100 (CEST)`;
 const myDateFormat_month_number2 = `${year + 2}/${month_number}/${day_number} (${day_name})  ${hours}:${minutes}:${seconds} GMT+0100 (CEST)`;
 const myDateFormat_month_number3 = `${year + 3}/${month_number}/${day_number} (${day_name})  ${hours}:${minutes}:${seconds} GMT+0100 (CEST)`;
-const myDateFormat_month_number4 = `${year + 4}/${month_number}/${day_number} (${day_name})  ${hours}:${minutes}:${seconds} GMT+0100 (CEST)`;
+const myDateFormat_month_number4 = `${year + 0}/${appendLeadingZeroes(new Date().getMonth() + 4)}/${16} (${'Bloomsday'})  ${hours}:${minutes}:${seconds} GMT+0100 (CEST)`;
 
 
 function Header() {
   return (
     <header>
-      <h1>HackYourFuture React-1 homework // Magda</h1>
-      <h4>
-        Today is {myDateFormat_month_name} <br />
-        What one squirrel needs to do: <br />
-      </h4>
-      ---> click <a href="https://github.com/HackYourFuture-CPH/React/blob/master/week1/homework.md#basic-react--props"> here</a> to see the instructions
+      <h1>HackYourFuture React-1 homework <br /> /Magda</h1>
+      <p>Today is {myDateFormat_month_name}</p>
+      <p>---> click <a href="https://github.com/HackYourFuture-CPH/React/blob/master/week1/homework.md#basic-react--props"> here</a> to see the instructions</p>
     </header>
   );
 }
 
-const todoThings =
+const toDoArrOfObj =
   [
     {
       nr: 1,
@@ -65,19 +62,23 @@ const todoThings =
       date: myDateFormat_month_number4
     }
   ];
+  console.log(toDoArrOfObj);
 
 class TodoList extends React.Component {
   render() {
-    const toDoListMapped = todoThings.map((tasks) => {
+    const toDoArrOfObj_mapped = toDoArrOfObj.map((tasks) => {
       return (
-        <div key={tasks.nr}>
-          {tasks.nr}. {tasks.date}: {tasks.task}
-        </div>
+        <ul key={tasks.nr}>
+          <li >
+            {tasks.nr}. {tasks.date}: {tasks.task}
+          </li>
+        </ul> 
       );
     });
-    return <main className="todolist">
-      To do list: {toDoListMapped}
+    console.log(toDoArrOfObj_mapped);
+    return <main> To do list: {toDoArrOfObj_mapped}
     </main>;
+    
   }
 }
 
@@ -85,7 +86,7 @@ class Footer extends React.Component {
   render() {
     return (
       <footer>
-        <h4>The footer says: respect your roots and squirrels. And love cats!</h4>
+        <h4>The footer:</h4>
         ---> click <a href="https://www.youtube.com/watch?v=9iGoDNlKY-g"> here </a> to see squirrels <br />
         ---> click <a href="https://www.youtube.com/watch?v=F_6IjeprfEs"> here </a> to listen to Sepultura
       </footer>
