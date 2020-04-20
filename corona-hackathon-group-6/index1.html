@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="stylesheet1.css">
+    <title>Corona HACKATHON group 6</title>
+</head>
+
+
+<body>
+
+    <header>
+        <h1>APP TITLE / LOGO etc.</h1>
+        <h2>
+            Dear Seniors, <br> the Corona virus pandemic makes everyday things more challenging, but there are
+            volunteers in the neighbourhood willig to help.
+        </h2>
+        <p class="filltheform">
+            Please <span class="highlight1">fill in the form</span> below to let us know
+            what we can do for you. Just type in the blue boxes or choose the options they will display.
+            There are also boxes you can check. When you're ready, please press the submit button at the bottom of the
+            form and the information will be sent and you will receive an email or a phone call with further
+            instructions.
+        </p>
+        <h4 class="filltheform"> If you need help with the form, call the number below <br>
+            <span class="highlight2">HELP-LINE <span></span> <span></span> +45 98765432</span>
+        </h4>
+
+    </header>
+
+
+    <main>
+        <h2 class="form-">FORM</h2>
+        <section>
+            <h3>Step 1: Your name</h3>
+            <!-- NAME  -->
+            <div class="rows-2">
+                <div class="columns-2">
+                    <label for="firstname">First name *</label>
+                    <input type="text" class="input-required" id="firstname" name="firstname"
+                        placeholder="insert first name" required>
+                </div>
+                <div class="columns-2">
+                    <label for="lastname">Last name *</label>
+                    <input type="text" class="input-required" id="lastname" name="lastname"
+                        placeholder="insert last name" required>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h3>Step 2: Your address</h3>
+            <!-- ADDRESS  -->
+            <div class="rows-3">
+                <div class="columns-2">
+                    <label for="area">Click on the box to pick your area *</label>
+                    <select class="drop-menu-style" id="area" name="area" required>
+                        <option value="Osterbro">Osterbro</option>
+                        <option value="Ishoj">Ishoj</option>
+                        <option value="Norrebro">Norrebro</option>
+                        <option value="Sydhavn">Sydhavn</option>
+                    </select>
+                </div>
+                <div class="columns-2">
+                    <label for="postcode">Post code *</label>
+                    <input type="text" class="input-required" id="postcode" name="postcode"
+                        placeholder="insert post code" required>
+                </div>
+            </div>
+            <div class="rows-3">
+                <div class="columns-2">
+                    <label for="address-street-name">Street: *</label>
+                    <input type="text" class="input-required" id="address-street-name" name="address-street-name"
+                        placeholder="insert street address" required>
+                </div>
+                <div class="columns-2">
+                    <label for="address-house-number">House number *</label>
+                    <input type="text" class="input-required" id="address-house-number" name="address-house-number"
+                        placeholder="insert house number" required>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h3>Step 3: How do we contact you?</h3>
+            <!-- PHONE NR and EMAIL -->
+            <div class="rows-3">
+                <div class="columns-2">
+                    <label for="email">Email (optional)</label>
+                    <input type="email" class="input-required" id="email" name="email" placeholder="...@........"
+                        pattern="[a-zA-Z]{0-9}@[a-zA-Z]{3,}[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,}">
+                </div>
+                <div class="columns-2">
+                    <label for="phone">Phone number*</label>
+                    <input type="text" id="phone" name="phone" placeholder="12 34 56 78" required>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h3>Step 4: Please invent a password for safety purposes. It should be at least 6 letters and 2 digits with
+                no spaces.
+            </h3>
+            <!-- PASSWORD -->
+            <div class="rows-3">
+                <div class="columns-2">
+                    <label for="password">Password*</label>
+                    <input type="text" class="input-required" id="password" name="password" minlength="6"
+                        pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" placeholder="enter your password" required>
+                </div>
+                <div class="columns-2">
+                    <label for="reenterpassword">Re-enter your password*</label>
+                    <input type="text" class="input-required" id="reenterpassword" name="reenterpassword" minlength="6"
+                        pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" placeholder="re-enter your password"
+                        required>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h3>Step 5: Please choose one ot the options below: </h3>
+            <div class="rows-3">
+                <div class="columns-2">
+                    <input id='flatmates1' name='flatmates' type='radio' value='alone' checked />
+                    <label for='flatmates1' class='radio-label'>I live alone <br> and I don't go outside.</label>
+                </div>
+                <div class="columns-2">
+                    <input id='flatmates2' name='flatmates' type='radio' value='with-spouse' />
+                    <label for='flatmates2' class='radio-label'> I don't live alone <br> but we don't go
+                        outside.</label>
+                </div>
+                <div class="columns-2">
+                    <input id='flatmates3' name='flatmates' type='radio' value='other' />
+                    <label for='flatmates3' class='radio-label'>other <br> situation </label>
+                </div>
+            </div>
+            <p>Please specify in the box below. Click on it and start typing inside it. </p>
+            <textarea class="text-area-style" id="flatmates-info" name="flatmates-info" placeholder=""></textarea>
+        </section>
+        <section>
+            <h3>Step 6: Do you need someone to do your shopping or walk your pet? </h3>
+            <div class="rows-3">
+                <div class="columns-2">
+                    <input id='shopping-pet-yes' name='shopping-pet' type='radio' value='shopping-pet-yes' checked />
+                    <label for='shopping-pet-yes' class='radio-label'> Yes </label>
+                </div>
+                <div class="columns-2">
+                    <input id='shopping-pet-no' name='shopping-pet' type='radio' value='shopping-pet-no' />
+                    <label for='shopping-pet-no' class='radio-label'> No </label>
+                </div>
+            </div>
+            <p>Please specify in the box below. Click on it and start typing inside it. </p>
+            <textarea class="text-area-style" id="flatmates-info" name="flatmates-info" placeholder=""></textarea>
+        </section>
+        <section>
+            <h3>Step 7: Would you like to connect with your friends on the video to spend time together or with other
+                seniors to talk about your interests? </h3>
+            <div class="rows-3">
+                <div class="columns-2">
+                    <input id='video-yes' name='video' type='radio' value='video-yes' checked />
+                    <label for='video-yes' class='radio-label'> Yes </label>
+                </div>
+                <div class="columns-2">
+                    <input id='video-no' name='video' type='radio' value='video-no' />
+                    <label for='video-no' class='radio-label'> No </label>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h3>Step 8: What are your interests?</h3>
+            <div class="columns-2">
+                <div class="rows-2">
+                    <input id='cooking' name='cooking' type='checkbox' value='cooking' class="checkmark" />
+                    <label for='cooking'> cooking, nom nom nom</label>
+                </div>
+                <div class="rows-2">
+                    <input id='singing' name='singing' type='checkbox' value='singing' class="checkmark" />
+                    <label for='singing'> singing for my cat</label>
+                </div>
+                <div class="rows-2">
+                    <input id='playing music together' name='playing music together' type='checkbox'
+                        value='playing music together' class="checkmark" />
+                    <label for='playing music together'> playing music together </label>
+                </div>
+                <div class="rows-2">
+                    <input id='yoga' name='yoga' type='checkbox' value='yoga' class="checkmark" />
+                    <label for='yoga'> yoga </label>
+                </div>
+                <div class="rows-2">
+                    <input id='heavy metal' name='heavy metal' type='checkbox' value='heavy metal' class="checkmark" />
+                    <label for='heavy metal'> heavy metal </label>
+                </div>
+                <div class="rows-2">
+                    <input id='other' name='other' type='checkbox' value='other' class="checkmark" />
+                    <label for='other'> other </label>
+                </div>
+            </div>
+            <p>If you have selected other, please specify your interests in the box below. Click on it and start typing
+                inside it. </p>
+            <textarea class="text-area-style" id="flatmates-info" name="flatmates-info" placeholder=""></textarea>
+        </section>
+        <section class="submit-area">
+            <button>
+                submit
+            </button>
+        </section>
+
+    </main>
+
+
+
+
+    <!-- <p>Progress:</p>
+    <progress max="100" value="20"></progress>
+    <p>Thank you :) </p> -->
+
+</body>
