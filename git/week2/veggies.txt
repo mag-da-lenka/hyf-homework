@@ -1,5 +1,7 @@
 potatoes 
 cucumbers 
-carrots 
+locally modified carrots 
 leeks 
-onions
+onions 
+broccoli 
+cauliflower
